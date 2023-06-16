@@ -8,9 +8,9 @@ export const authOptions: NextAuthOptions = {
   providers: [
 
     AzureADProvider({
-           clientId: process.env.AZURE_AD_CLIENT_ID,
-           clientSecret: process.env.AZURE_AD_CLIENT_SECRET,
-           tenantId: process.env.AZURE_AD_TENANT_ID,
+           clientId: process.env.AZURE_AD_CLIENT_ID || "1",
+           clientSecret: process.env.AZURE_AD_CLIENT_SECRET || "2",
+           tenantId: process.env.AZURE_AD_TENANT_ID || "3",
          }),
   ],
   callbacks: {
